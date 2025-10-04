@@ -25,7 +25,7 @@ const allProjects: Project[] = [
     status: "Complete",
     link: "https://public.tableau.com/views/AirBnBMarketTrend/Dashboard2?:language=en-GB&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     startingAt: new Date("2025-09-04"),
-    photo: "/images/data-pipeline-preview.png",
+    photo: "images/AirBnb.png",
   },
   {
     namaprojek: "ITFest IPB : Plant Detection",
@@ -35,7 +35,7 @@ const allProjects: Project[] = [
     status: "Complete",
     link: "https://plant-disease2.vercel.app",
     startingAt: new Date("2025-07-05"),
-    photo: "/images/data-pipeline-preview.png",
+    photo: "images/ITFest.png",
   },
   {
     namaprojek: "PupukinAI",
@@ -45,7 +45,7 @@ const allProjects: Project[] = [
     status: "Complete",
     link: "https://colab.research.google.com/drive/14ARYQsqzdHQ9pb4-PSuDY8n5iJN53g1i?usp=sharing",
     startingAt: new Date("2025-01-02"),
-    photo: "/images/data-pipeline-preview.png",
+    photo: "images/PupukinAI.png",
   },
   {
     namaprojek: "BuyBuddy",
@@ -55,7 +55,7 @@ const allProjects: Project[] = [
     status: "Complete",
     link: "https://www.figma.com/proto/kQISciy9d6JXM0R3ERYtSP/Tahu-Bulats?page-id=0%3A1&node-id=57-2&starting-point-node-id=94%3A80&t=vYzY9zKTjsChgsIZ-1",
     startingAt: new Date("2024-10-27"),
-    photo: "/images/data-pipeline-preview.png",
+    photo: "images/buybuddy.png",
   },
   {
     namaprojek: "Satria Data: Deforestasi Indonesia",
@@ -65,7 +65,7 @@ const allProjects: Project[] = [
     status: "Complete",
     link: "https://www.canva.com/design/DAGHcEvnD5c/VaGzB1aBYvQ4Brc0UhVKqw/edit?utm_content=DAGHcEvnD5c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
     startingAt: new Date("2024-06-20"),
-    photo: "/images/data-pipeline-preview.png",
+    photo: "images/SatriaData.png",
   },
   {
     namaprojek: "ASEAN DSE Competition: Overcoming Malnutrition",
@@ -75,7 +75,7 @@ const allProjects: Project[] = [
     status: "Complete",
     link: "https://drive.google.com/file/d/1S0CjOChLQVjFwaxdEPYr8KhkMvElJq1y/view?usp=sharing",
     startingAt: new Date("2024-06-14"),
-    photo: "/images/data-pipeline-preview.png",
+    photo: "images/ASEANDSE.png",
   }
 ];
 

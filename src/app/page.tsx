@@ -25,7 +25,7 @@ export default function Home() {
             <h2 className="mx-24 my-4 text-white rounded-full text-m">
               Data Engineer | Software Engineer
             </h2>
-            <h1 className="mx-24 font-semibold text-4xl text-blue-400 drop-shadow-[0_0_10px_#3b82f6]">
+            <h1 className="mx-24 font-semibold text-4xl text-blue-300 drop-shadow-[0_0_10px_#3b82f6]">
               Natasha Dian Mahardita
             </h1>
             <h2 className="mx-24 my-4 text-white text-m pt-2">
