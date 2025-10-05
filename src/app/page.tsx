@@ -22,13 +22,13 @@ export default function Home() {
         <div className="flex flex-row min-h-screen items-center justify-between">
           {/* Left Text Section */}
           <div className="flex flex-col flex-1 w-170 min-h-screen justify-center items-start animate__animated animate__fadeInLeft">
-            <h2 className="mx-24 my-4 text-white rounded-full text-m">
+            <h2 className="mx-24 my-4 text-white rounded-full text-m font-inter">
               Data Engineer | Software Engineer
             </h2>
-            <h1 className="mx-24 font-semibold text-4xl text-blue-300 drop-shadow-[0_0_10px_#3b82f6]">
+            <h1 className="font-openSans mx-24 font-bold text-4xl text-blue-300 drop-shadow-[0_0_10px_#3b82f6]">
               Natasha Dian Mahardita
             </h1>
-            <h2 className="mx-24 my-4 text-white text-m pt-2">
+            <h2 className="font-inter mx-24 my-4 text-white text-m pt-2">
               An undergraduate Computer Science student passionate about building data-driven
               solutions and software applications. Interested in building efficient systems
               and solving real-world problems through technology. Get to know me!

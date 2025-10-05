@@ -137,7 +137,7 @@ export default function Projects({ type }: ProjectsProps) {
               <p className="text-gray-100 font-semibold text-sm">
                 {formatdate(p.startingAt)}
               </p>
-              <p className="text-gray-100 text-sm mb-2 break-words">
+              <p className="text-gray-100 text-sm mt-4 break-words text-justify">
                 {p.deskripsi}
               </p>
 
