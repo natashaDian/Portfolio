@@ -7,7 +7,7 @@ import "animate.css";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#050816]">
+    <div className="min-h-screen bg-[#15111A]">
       <SideNavbar />
       <main>
         <HeroSection />

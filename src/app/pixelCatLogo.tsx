@@ -28,8 +28,8 @@ export default function PixelCatLogo({ className = "" }: PixelCatLogoProps) {
               pixel === "0"
                 ? "size-1.5"
                 : pixel === "2"
-                  ? "size-1.5 bg-pink-400"
-                  : "size-1.5 bg-[#F8FAFC]"
+                  ? "size-1.5 bg-[#C97B84]"
+                  : "size-1.5 bg-[#EDE6F0]"
             }
           />
         )),

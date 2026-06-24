@@ -71,13 +71,13 @@ export default function SideNavbar() {
   return (
     <nav
       aria-label="Primary navigation"
-      className="fixed inset-x-0 top-0 z-50 px-4 py-5 text-[#94A3B8] sm:px-8"
+      className="fixed inset-x-0 top-0 z-50 px-4 py-5 text-[#8C8295] sm:px-8"
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
         <a
           href="#home"
           aria-label="Natasha Dian Mahardita home"
-          className="flex size-12 shrink-0 items-center justify-center rounded-full border border-[#1E293B] bg-[#050816] transition-colors duration-300 hover:border-[#38BDF8]"
+          className="flex size-12 shrink-0 items-center justify-center rounded-full border border-[#1F1825] bg-[#1F1825] transition-colors duration-300 hover:border-[#C97B84]"
         >
           <PixelCatLogo />
         </a>
@@ -92,10 +92,10 @@ export default function SideNavbar() {
                   href={href}
                   aria-current={isActive ? "page" : undefined}
                   className={cn(
-                    "group flex h-12 items-center gap-2 rounded-full border bg-[#050816] px-4 text-xs font-medium uppercase leading-none tracking-[0.14em] transition duration-300",
+                    "group flex h-12 items-center gap-2 rounded-full border bg-[#1F1825] px-4 text-xs font-medium uppercase leading-none tracking-[0.14em] transition duration-300",
                     isActive
-                      ? "border-[#38BDF8] text-[#38BDF8]"
-                      : "border-[#1E293B] text-[#94A3B8] hover:border-[#38BDF8] hover:text-[#F8FAFC]",
+                      ? "border-[#C97B84] text-[#C97B84]"
+                      : "border-[#1F1825] text-[#8C8295] hover:border-[#C97B84] hover:text-[#EDE6F0]",
                   )}
                 >
                   <Icon
@@ -118,7 +118,7 @@ export default function SideNavbar() {
               aria-label={label}
               target={href.startsWith("mailto:") ? undefined : "_blank"}
               rel={href.startsWith("mailto:") ? undefined : "noopener noreferrer"}
-              className="flex size-12 items-center justify-center rounded-full border border-[#1E293B] bg-[#050816] text-[#94A3B8] transition duration-300 hover:border-[#8B5CF6] hover:text-[#8B5CF6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#38BDF8] focus-visible:ring-offset-4 focus-visible:ring-offset-[#050816]"
+              className="flex size-12 items-center justify-center rounded-full border border-[#1F1825] bg-[#1F1825] text-[#8C8295] transition duration-300 hover:border-[#7C81A6] hover:text-[#7C81A6] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C97B84] focus-visible:ring-offset-4 focus-visible:ring-offset-[#15111A]"
             >
               <Icon aria-hidden="true" strokeWidth={1.8} className="size-4" />
             </a>
