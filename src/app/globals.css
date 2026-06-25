@@ -148,25 +148,55 @@ body {
 }
 
 @keyframes timeline-dot-travel {
-  0%, 8% {
+  0%, 12% {
     top: calc(100% - 28px);
   }
-  28%, 36% {
+  22%, 26% {
     top: 66%;
   }
-  56%, 64% {
+  38%, 42% {
     top: 34%;
   }
-  84%, 92% {
+  56%, 60%, 100% {
     top: 12px;
-  }
-  100% {
-    top: calc(100% - 28px);
   }
 }
 
 .animate-timeline-dot {
-  animation: timeline-dot-travel 11s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  animation: timeline-dot-travel 5.5s cubic-bezier(0.65, 0, 0.35, 1) infinite alternate;
+}
+
+@keyframes photo-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-6px) scale(1.01);
+  }
+}
+
+.animate-photo-float {
+  animation: photo-float 8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+[data-active="true"] {
+  background-color: #EDE6F0;
+  border-color: rgba(201, 123, 132, 0.7);
+}
+
+[data-active="true"] p,
+[data-active="true"] h2,
+[data-active="true"] span {
+  color: #15111A !important;
+}
+
+[data-active="true"] .inline-flex {
+  background-color: rgba(201, 123, 132, 0.1) !important;
+}
+
+.animate-timeline-dot {
+  animation: timeline-dot-travel 5.5s cubic-bezier(0.65, 0, 0.35, 1) infinite alternate;
 }
 
 @media (prefers-reduced-motion: reduce) {

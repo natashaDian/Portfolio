@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="title desc">
+  <title id="title">Dummy photo</title>
+  <desc id="desc">Placeholder image for experience card</desc>
+  <rect width="400" height="300" fill="#1F1825" />
+  <rect x="20" y="20" width="360" height="260" rx="24" fill="#222" />
+  <path d="M80 220h240" stroke="#7C81A6" stroke-width="8" stroke-linecap="round" />
+  <circle cx="120" cy="120" r="42" fill="#C97B84" />
+  <path d="M156 120a36 36 0 1 1-72 0 36 36 0 0 1 72 0Z" fill="#15111A" />
+  <rect x="180" y="90" width="120" height="80" rx="16" fill="#C97B84" />
+  <line x1="200" y1="110" x2="280" y2="110" stroke="#15111A" stroke-width="8" stroke-linecap="round" />
+  <line x1="200" y1="140" x2="260" y2="140" stroke="#15111A" stroke-width="8" stroke-linecap="round" />
+</svg>

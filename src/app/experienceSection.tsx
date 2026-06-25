@@ -1,41 +1,71 @@
-import { BarChart3, Database, FileCode2, MailCheck } from "lucide-react";
+"use client";
+
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { Users, Database, Sparkles, BriefcaseBusiness, ArrowRight } from "lucide-react";
 
 const experiences = [
   {
-    period: "2026 — Now",
-    title: "Automated Email Retur Notification",
-    tag: "Oracle EBS Programming",
+    period: "2026 — Present",
+    title: "ERP Specialist (Oracle)",
+    tag: "Internship",
     description:
-      "Automated supplier  invoice processing with PL/SQL procedures, form, validation logic, and workflow routing.",
-    icon: FileCode2,
+      "Internship role focused on Oracle EBS, PL/SQL, and workflow customization to enhance business processses and deliver reliable value.",
+    icon: BriefcaseBusiness,
+    photo: "/images/dummy.svg",
+    link: ""
   },
   {
     period: "2025 — 2026",
-    title: "Vendor Email Notification",
-    tag: "Oracle EBS Integration",
+    title: "Data Engineering by Dibimbing",
+    tag: "Bootcamp",
     description:
-      "Developed SMTP integration for automatic vendor notifications and operational follow-up.",
-    icon: MailCheck,
+      "Developed data engineering skills within 6 months to graduate, worked on case studies from several companies.",
+    icon: Database,
+    photo: "/images/dummy.svg",
+    link: ""
   },
   {
     period: "2024 — 2025",
-    title: "Branch Financial Report",
-    tag: "Reporting & Analysis",
+    title: "Marketing Team",
+    tag: "Part Time Job",
     description:
-      "Created Oracle Reports and BI Publisher outputs for multi-branch financial visibility.",
-    icon: BarChart3,
+      "Assisted in promoting Binus University through various high school events, performed data entry, telemarketing as customer service at admission, served as MC as multiple official events.",
+    icon: Sparkles,
+    photo: "/images/dummy.svg",
+    link: ""
   },
   {
-    period: "2023 — 2024",
-    title: "Database Development Foundation",
-    tag: "SQL & Documentation",
+    period: "2024 — 2025",
+    title: "Freshman Partner",
+    tag: "Student Organization",
     description:
-      "Built a strong base in SQL logic, data modeling, technical documentation, and structured problem solving.",
-    icon: Database,
+      "Led a team of freshmen within one year to help them transition into university life, including assisting their academic and social integration.",
+    icon: Users,
+    photo: "/images/dummy.svg",
+    link: ""
   },
 ];
 
 export default function ExperienceSection() {
+  const [activeIndex, setActiveIndex] = useState(3);
+  const startTimeRef = useRef<number>(Date.now());
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      const elapsed = (Date.now() - startTimeRef.current) % 11000;
+      if (elapsed < 5500) {
+        const stage = Math.min(3, Math.floor((elapsed / 5500) * 4));
+        setActiveIndex(3 - stage);
+      } else {
+        const stage = Math.min(3, Math.floor(((elapsed - 5500) / 5500) * 4));
+        setActiveIndex(stage);
+      }
+    }, 100);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
   return (
     <section
       id="experience"
@@ -66,7 +96,7 @@ export default function ExperienceSection() {
           />
 
           <div className="space-y-14 lg:space-y-16">
-            {experiences.map(({ period, title, tag, description, icon: Icon }, index) => {
+            {experiences.map(({ period, title, tag, description, icon: Icon, photo, link }, index) => {
               const isLeft = index % 2 === 1;
 
               return (
@@ -83,34 +113,54 @@ export default function ExperienceSection() {
                         : "lg:col-start-3 lg:row-start-1 lg:pl-12"
                     }`}
                   >
-                    <div className="rounded-lg border border-[#1F1825] bg-[#1F1825]/80 p-6 transition duration-300 hover:border-[#C97B84]/70">
-                      <p className="text-sm font-semibold tracking-[0.16em] text-[#EDE6F0]">
+                    <div
+                      data-active={activeIndex === index ? "true" : undefined}
+                      className="group rounded-lg border border-[#1F1825] bg-[#1F1825]/80 p-6 transition duration-300 hover:border-[#C97B84]/70 hover:bg-[#EDE6F0]"
+                    >
+                      <p className="text-sm font-semibold tracking-[0.16em] text-[#EDE6F0] group-hover:text-[#15111A]">
                         {period}
                       </p>
-                      <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#EDE6F0] sm:text-3xl">
+                      <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#EDE6F0] group-hover:text-[#15111A] sm:text-3xl">
                         {title}
                       </h2>
-                      <span className="mt-4 inline-flex rounded-full bg-[#C97B84]/10 px-3 py-1 text-xs text-[#C97B84]">
+                      <span className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#C97B84]/10 px-3 py-1 text-xs text-[#C97B84] group-hover:text-[#15111A] group-hover:bg-[#C97B84]/20">
+                        <Icon aria-hidden="true" className="size-3" strokeWidth={1.5} />
                         {tag}
                       </span>
-                      <p className="mt-5 max-w-xl text-sm leading-8 text-[#8C8295] lg:ml-auto">
+                      <p className="mt-5 max-w-xl text-sm leading-8 text-[#8C8295] group-hover:text-[#15111A] lg:ml-auto">
                         {description}
                       </p>
+                      <div className="mt-10 flex flex-wrap items-center gap-4 justify-end">
+                        <a href={link}
+                          className="group inline-flex items-center gap-3 border-b border-[#C97B84] pb-3 text-xs font-medium uppercase tracking-[0.28em] text-[#C97B84] transition-colors duration-300 group-hover:text-[#15111A]">
+                          Learn More
+                          <ArrowRight className="text-[#C97B84] group-hover:text-[#15111A] size-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </a>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center lg:static lg:mx-auto lg:h-[88px] lg:w-[88px]">
-                    <span className="absolute h-4 w-4 rounded-full border-2 border-[#7C81A6] bg-[#15111A]" />
-                    <span className="absolute h-10 w-10 rounded-full border border-[#7C81A6]/35" />
-                    <span
-                      className={`absolute top-1/2 hidden h-px w-14 bg-[#7C81A6]/55 lg:block ${
-                        isLeft ? "left-1/2" : "right-1/2"
-                      }`}
-                    />
-                    <div className="hidden size-14 items-center justify-center rounded-full border border-[#1F1825] bg-[#1F1825] text-[#C97B84] lg:flex">
-                      <Icon aria-hidden="true" className="size-6" strokeWidth={1.5} />
+                  <div
+                    className={`hidden lg:flex lg:items-center lg:justify-center lg:rounded-3xl lg:border lg:border-[#1F1825] lg:bg-[#15111A] lg:p-4 lg:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.02)] ${
+                      isLeft ? "lg:col-start-3" : "lg:col-start-1"
+                    }`}
+                  >
+                    <div className="relative h-56 w-full max-w-[260px] overflow-hidden rounded-3xl border border-[#7C81A6]/20 bg-[#15111A] shadow-[0_0_24px_rgba(0,0,0,0.15)]">
+                      {photo ? (
+                        <Image
+                          src={photo}
+                          alt={title}
+                          fill
+                          className="object-cover animate-photo-float"
+                        />
+                      ) : (
+                        <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.18em] text-[#8C8295]">
+                          No image
+                        </div>
+                      )}
                     </div>
                   </div>
+
                 </article>
               );
             })}

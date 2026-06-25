@@ -69,7 +69,7 @@ export default function HeroSection() {
               className="inline-flex h-12 items-center gap-3 rounded-full border border-[#1F1825] bg-[#1F1825] px-5 text-xs font-medium uppercase tracking-[0.18em] text-[#EDE6F0] transition duration-300 hover:border-[#7C81A6] hover:text-[#7C81A6]"
             >
               <FileText aria-hidden="true" className="size-4" />
-              Resume
+              Download CV
             </a>
           </div>
         </div>
